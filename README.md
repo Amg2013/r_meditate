@@ -8,12 +8,9 @@ It provides a clean, modern, and modular user interface for meditation apps, inc
 ## 📱 Screenshots
 
 <p align="center">
-  <img src="screenshots/Onboarding Screen.png" alt="Home Screen" width="200"/>
-  <img src="screenshots/Presentation.png" alt="Discover Screen" width="200"/>
-
+  <img src="screenshots/Onboarding Screen.png" alt="Onboarding Screen" style="width:100%;display:block;margin-bottom:20px;"/>
+  <img src="screenshots/Presentation.png" alt="Presentation Screen" style="width:100%;display:block;"/>
 </p>
-
-*Add your own screenshots to the `screenshots/` folder for better project presentation!*
 
 ---
 
@@ -23,14 +20,68 @@ R_meditate is designed as a starting point or reference for building meditation 
 It demonstrates best practices in UI structure, navigation, and state management, and is easy to extend for your own needs.
 
 ---
+## 📁 Project Structure
 
-## 2. Project Structure
-- **lib/main.dart**: App entry point.
-- **lib/routes/**: Named route definitions.
-- **lib/provider/**: Base models and view logic.
-- **lib/view/**: View models for each screen.
-- **lib/src/screens/**: UI for each feature screen.
-- **assets/images/**: App images and splash backgrounds.
+
+learning_app/
+│
+├── android/                  # Android native code and config
+├── ios/                      # iOS native code and config
+├── linux/                    # Linux desktop support
+├── macos/                    # macOS desktop support
+├── web/                      # Web support (index.html, manifest.json, etc.)
+├── windows/                  # Windows desktop support
+│
+├── assets/
+│   └── images/               # App images, splash backgrounds, icons, etc.
+│
+├── lib/
+│   ├── main.dart             # App entry point
+│   ├── config/               # App-wide configuration (e.g., size_config.dart)
+│   ├── constant/             # App constants (e.g., colors, strings)
+│   ├── enum/                 # Enum definitions (e.g., view_state.dart)
+│   ├── provider/             # Base models, view logic, dependency injection
+│   │   ├── base_model.dart
+│   │   ├── base_view.dart
+│   │   └── getit.dart
+│   ├── routes/               # Named route definitions
+│   │   └── routes.dart
+│   ├── service/              # App services (e.g., navigation)
+│   │   └── navigation_service.dart
+│   ├── src/
+│   │   ├── screens/          # UI for each feature screen
+│   │   │   ├── discover_screen/
+│   │   │   │   ├── components/
+│   │   │   │   └── discover_screen.dart
+│   │   │   ├── home_screen/
+│   │   │   │   ├── components/
+│   │   │   │   └── home_screen.dart
+│   │   │   ├── player_screen/
+│   │   │   │   ├── components/
+│   │   │   │   └── player_screen.dart
+│   │   │   ├── premium_screen/
+│   │   │   │   ├── components/
+│   │   │   │   └── premium_screen.dart
+│   │   │   ├── profile_screen/
+│   │   │   │   ├── components/
+│   │   │   │   └── profile_screen.dart
+│   │   │   └── splash_screen/
+│   │   │       ├── components/
+│   │   │       └── splash_screen.dart
+│   │   └── widgets/          # Shared/reusable widgets (e.g., bottom_nav_bar.dart)
+│   ├── view/                 # View models for each screen
+│   │   ├── discover_screen_view_model.dart
+│   │   ├── home_screen_view_model.dart
+│   │   ├── player_screen_view_model.dart
+│   │   ├── premium_screen_view_model.dart
+│   │   ├── profile_screen_view_model.dart
+│   │   └── splash_screen_view_model.dart
+│
+├── test/                     # Unit and widget tests
+│
+├── pubspec.yaml              # Project metadata and dependencies
+├── README.md                 # Project documentation
+└── ...                       # Other config files (gitignore, analysis_options.yaml, etc.)
 
 ---
 
@@ -73,7 +124,7 @@ It demonstrates best practices in UI structure, navigation, and state management
 
 ## 🙏 Thanks
 
-Special thanks to ##sourany## for providing the free Figma design that inspired this UI.  
+Special thanks to  <p sourany >for providing the free Figma design that inspired this UI.  
 This project would not be possible without their creative work and generosity in sharing design resources with the community.
 
 ---
