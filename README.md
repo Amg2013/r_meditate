@@ -21,19 +21,9 @@ It demonstrates best practices in UI structure, navigation, and state management
 
 ---
 ## 📁 Project Structure
-
+ ```
 
 learning_app/
-│
-├── android/                  # Android native code and config
-├── ios/                      # iOS native code and config
-├── linux/                    # Linux desktop support
-├── macos/                    # macOS desktop support
-├── web/                      # Web support (index.html, manifest.json, etc.)
-├── windows/                  # Windows desktop support
-│
-├── assets/
-│   └── images/               # App images, splash backgrounds, icons, etc.
 │
 ├── lib/
 │   ├── main.dart             # App entry point
@@ -77,13 +67,9 @@ learning_app/
 │   │   ├── profile_screen_view_model.dart
 │   │   └── splash_screen_view_model.dart
 │
-├── test/                     # Unit and widget tests
-│
-├── pubspec.yaml              # Project metadata and dependencies
-├── README.md                 # Project documentation
-└── ...                       # Other config files (gitignore, analysis_options.yaml, etc.)
+└── ...                     
 
----
+```
 
 ## 3. Main Dependencies
 
